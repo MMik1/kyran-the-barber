@@ -146,7 +146,6 @@ font-weight: 400;
 line-height: normal;
 }
 
-
 .container{
     display: flex;
 padding: 72px 48px;
@@ -313,7 +312,14 @@ font-weight: 700;
 line-height: normal;
 }
 
-
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .footerp{
    color: #333;
