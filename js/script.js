@@ -13,10 +13,9 @@ const alleTijdOpties = Array.from(timeSelect.options).map(optie => ({
   tekst: optie.text
 }));
 
-// Buiten de change-listener zodat submit er ook bij kan
 let bezetteTijden = [];
 
-dateInput.addEventListener('change', async function () {
+async function checkBeschikbaarheid() {
   const gekozenDatum = dateInput.value;
   if (!gekozenDatum) return;
 
@@ -28,15 +27,8 @@ dateInput.addEventListener('change', async function () {
     timeSelect.appendChild(nieuweOptie);
   });
 
-  // Fix 4: foutafhandeling rond de beschikbaarheids-call
   try {
-    // Fix 1: productie-webhook i.p.v. /webhook-test/
-    // Pas het pad hieronder aan naar de EXACTE URL die n8n toont
-    // wanneer de workflow op "Active" staat (productie-webhook).
-    const antwoord = await fetch(
-      'https://myn8n.illuvex.com/webhook/beschikbaarheidkyran?date=' + gekozenDatum
-    );
-
+    const antwoord = await fetch('https://myn8n.illuvex.com/webhook/beschikbaarheidkyran?date=' + gekozenDatum);
     if (!antwoord.ok) throw new Error('Kon beschikbaarheid niet ophalen');
 
     const data = await antwoord.json();
@@ -52,16 +44,19 @@ dateInput.addEventListener('change', async function () {
     console.error('Fout bij ophalen beschikbaarheid:', err);
     bezetteTijden = [];
   }
-});
+}
+
+dateInput.addEventListener('change', checkBeschikbaarheid);
+
+checkBeschikbaarheid();
 
 const form = document.querySelector('.bookingform form');
 
 form.addEventListener('submit', async function (event) {
   event.preventDefault();
 
-  // Check 1: lege/ongeldige velden
   if (!form.checkValidity()) {
-    form.reportValidity(); // laat de browser de standaard foutmeldingen tonen
+    form.reportValidity(); 
     return;
   }
 
