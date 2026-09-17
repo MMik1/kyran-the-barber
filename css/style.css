@@ -281,7 +281,7 @@ background: #AB9081;
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
+input[type="number"],
 input[type="date"],
 input[type="time"],
 textarea,
