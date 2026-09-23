@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyran the Barber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav class="nav">
+    <p class="title">Kyran the Barber</p>
+    <div class="navbarcontainer">
+          <ul>
+    <li><a href="#diensten">Diensten</a></li>
+    <li><a href="#overons">Over ons</a></li>
+     <li><a href="#contact">Contact</a></li>
+      <button class="main-button"> Afspraak maken</button>
+  </ul>
+    </div>
+    </nav>
+    <div class="hero-section">
+        <h1>Vakwerk voor je haar en baard</h1>
+        <p>Korte introductietekst over de barbershop en de service.</p>
+        <button class="main-button"> Boek nu je afspraak</button>
+    </div>
+<div class="container">
+<div id="diensten" class="parent">
+    <div class="cardfoto">
+        <div class="foto1"></div>
+         <p class="titlecards">Knippen</p>
+         <p class="cardsbeschrijving">€ 24.99 · 30 min</p>
+         <p class="cardsbeschrijving">Korte beschrijving van de dienst.</p>
+    </div>
+    <div class="cardfoto">
+        <div class="foto1"></div>
+         <p class="titlecards">Baard trimmen</p>
+         <p class="cardsbeschrijving">€ 15,- · 20 min</p>
+         <p class="cardsbeschrijving">Korte beschrijving van de dienst.</p>
+    </div>
+        <div class="cardfoto">
+        <div class="foto1"></div>
+         <p class="titlecards">Knippen + baard</p>
+         <p class="cardsbeschrijving">€ 35,- · 45 min</p>
+         <p class="cardsbeschrijving">Korte beschrijving van de dienst.</p>
+    </div>
+        <div class="cardfoto">
+        <div class="foto1"></div>
+         <p class="titlecards">Kinderknipbeurt</p>
+         <p class="cardsbeschrijving">€ 20,- · 30 min</p>
+         <p class="cardsbeschrijving">Korte beschrijving van de dienst.</p>
+        </div>
+    </div>
+</div>
+    <div id="overons" class="containeroverons">
+        <div class="fotokyran"></div>
+        <div class="textcontainer">
+            <h2>Over Kyran</h2>
+<ul class="text">
+    <li>Korte alinea met achtergrondinformatie over de barbier, ervaring en stijl.</li>
+  <li>• Ervaren barbier met oog voor detail</li>
+  <li>• Persoonlijk advies bij elke afspraak</li>
+  <li>• Gezellige, ontspannen sfeer</li>
+</ul>
+        </div>
+    </div>
+    <div id="boeken" class="formcontainer">
+        <div class="textcontainerafspraak">
+        <h3>Maak een afspraak</h3>
+        <ul class="text">
+    <li>Korte alinea met achtergrondinformatie over de barbier, ervaring en stijl.</li>
+  <li>• Ervaren barbier met oog voor detail</li>
+  <li>• Persoonlijk advies bij elke afspraak</li>
+  <li>• Gezellige, ontspannen sfeer</li>
+</ul>
+        </div>
+        <div class="bookingform">
+        <form  action="https://myn8n.illuvex.com/webhook/016b973d-2371-44d8-a2d6-65de386ea567" method="GET" style="width: 100%;">
+<div class="text-formcontainer">
+<div class="input-container">
+    <label for="naam">Naam:</label>
+    <input type="text" id="naam" name="naam" required>
+</div>
+<div class="input-container">
+    <label for="telefoonnummer">Telefoonnummer:</label>
+    <input type="number" id="telefoonnummer" name="telefoonnummer" required>
+</div>
+<div class="input-container input-container--full">
+    <label for="email">E-mailadres:</label>
+    <input type="email" id="email" name="email" required>
+</div>
+<div class="input-container input-container--full">
+    <label for="dienst">Dienst:</label>
+    <select id="dienst" name="dienst" required>
+        <option value="knippen">Knippen</option>
+        <option value="baard">Baard</option>
+        <option value="knippen-baard">Knippen + Baard</option>
+        <option value="kinderknipbeurt">Kinderknipbeurt</option>
+    </select>
+</div>
+<div class="input-container">
+    <label for="date">Datum:</label>
+    <input type="date" id="date" name="date" required>
+</div>
+<div class="input-container">
+    <label for="time">Tijd:</label>
+    <select id="time" name="time" required>
+  <option value="08:00">08:00</option>
+  <option value="08:30">08:30</option>
+    <option value="09:00">09:00</option>
+    <option value="09:30">09:30</option>
+    <option value="10:00">10:00</option>
+    <option value="10:30">10:30</option>
+    <option value="11:00">11:00</option>
+    <option value="11:30">11:30</option>
+    <option value="12:00">12:00</option>
+    <option value="12:30">12:30</option>
+    <option value="13:00">13:00</option>
+    <option value="13:30">13:30</option>
+    <option value="14:00">14:00</option>
+    <option value="14:30">14:30</option>
+    <option value="15:00">15:00</option>
+    <option value="15:30">15:30</option>
+    <option value="16:00">16:00</option>
+      <option value="16:30">16:30</option>
+  <option value="17:00">17:00</option>
+</select>
+    </div>
+    <div class="input-container input-container--full">
+    <label for="text">Opmerkingen:</label>
+    <input type="text" id="text" name="text">
+</div>
+    <div class="input-container input-container--full">
+ <button type="submit" class="button">Verstuur</button>
+    </div>
+            <p id="form-popup" style="display:none;"></p>
+</div>
+
+<p class="algemenevoorwaardenform">bevestiging per e-mail</p>
+        </form>
+        </div>
+    </div>
+  </div>
+  <footer>
+    <div class="nattefootercontainer">
+ <p class="footer-title">
+    Kyran the Barber
+ </p>
+ <p class="footerp"> Achtse-barrier 12</p>
+  <p class="footerp">5683TP Eindhoven</p>
+  <a class="footerp" href="https://script.google.com/macros/s/AKfycbyS7xDBdeJttqwbXkzW6Lb2ThzY4CHjaJSQpJkU7zdziExM7VxCLlIhLdOXsoudt1IS/exec">Admin login</a>
+  </div>
+      <div class="nattefootercontainer">
+ <p class="footer-title">
+    Contact
+ </p>
+ <p id="contact" class="footerp"> 0651104710 </p>
+  <p class="footerp">info@kyrandebarber.nl</p>
+  </div>
+      <div class="nattefootercontainer">
+ <p class="footer-title">
+    Openingstijden
+ </p>
+ <p class="footerp"> Di - Do: 09:00 - 18:00</p>
+  <p class="footerp">Vr: 09:00 - 19:00</p>
+    <p class="footerp">Za: 09:00 - 16:00</p>
+    <p class="footerp">Zo & Ma: gesloten</p>
+  </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
