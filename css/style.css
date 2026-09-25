@@ -241,7 +241,7 @@
   .formcontainer{
       display: flex;
   padding: 72px 48px;
-  align-items: flex-start;
+  align-items: center;
   gap: 64px;
   align-self: stretch;
   }
@@ -361,6 +361,8 @@
     .containeroverons,
     .formcontainer {
       padding: 48px 24px;
+      align-items: center;
+      display: flex;
     }
 
     .parent {
